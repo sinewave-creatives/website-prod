@@ -82,7 +82,7 @@ exports.handler = async (event, context, callback) => {
   const mailOptions = {
     from: 'sinewaveenquiries@gmail.com',
     to: 'sindhu@sinewave.design,sud@sinewave.design',
-    subject: 'Sinewave Enquiry from '+data.name+' ( '+data.type+' ) + Website Testing',
+    subject: 'Sinewave Enquiry from '+data.name+' ( '+data.type+' )',
     attachments: [{
       filename: 'insta.png',
       path: `https://sinewavedemo.netlify.com/logo.png`,
