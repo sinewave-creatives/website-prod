@@ -1,0 +1,219 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("0462590be6674a5827956be5045c54de.eot");
+	/* IE9*/
+	src: url("0462590be6674a5827956be5045c54de.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */ url("0462590be6674a5827956be5045c54de.woff2")
+			format("woff2"),
+		/* chrome、firefox */ url("0462590be6674a5827956be5045c54de.woff")
+			format("woff"),
+		/* chrome、firefox */ url("0462590be6674a5827956be5045c54de.ttf")
+			format("truetype"),
+		/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+			url("0462590be6674a5827956be5045c54de.svg#Montserrat Regular")
+			format("svg");
+	/* iOS 4.1- */
+	font-display: swap;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+}
+
+.pageGradientBackground{
+  padding-top:5vh; 
+  /* Height of top bar is 6.25rem */
+  background-image:linear-gradient( to bottom,  #4b337f 0vh, #4b337f 40%,  #4b337f9f 100%);
+  margin-right: 0;
+  width: 100vw;
+}
+
+.centeredYellowLine{
+  width:56%;
+  margin-left: 22%;
+  border-bottom: #F4B72F 0.5rem solid;
+  margin-top:7vh; 
+}
+
+.peopleTitleGrid{
+  margin-top:5vh;
+  margin-left:25vw;
+  width:50vw;
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+}
+
+
+.peopleTitle{
+  font-family: 'Montserrat';
+  padding: 0;
+  margin: 0;
+}
+
+.horizontalLine{
+  border-left: #C9BEDF 1rem solid;
+  height: 95%;
+}
+
+
+
+.peopleTitle{
+  /* font:"normal normal normal 90px/1.4em helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif"; */
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 4rem;
+	letter-spacing: 0.1ch;
+	font-weight: 700;
+  color:#C9BEDF;
+  /* TODO Need to bring to lower end of div  */
+}
+
+.peopleWholeContainer{
+  margin-top:2vw;
+  margin-left:25vw;
+  width:55vw;
+}
+
+.individualPerson{
+  display: grid;
+  grid-column-gap:5rem;
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
+.individualPerson:nth-child(2n+1){
+  grid-template:"image text";
+  /* grid-template-columns: repeat(2,1fr); */
+}
+
+.individualPerson:nth-child(2n){
+  grid-template:"text image";
+  /* grid-template-columns: repeat(2,1fr); */
+}
+/* .underlinedImage{
+  width:100%;
+  border-bottom: 10px solid #806F9F;
+} */
+
+.personImage{
+  padding-bottom: 15px;
+  border-bottom: 8px solid #806F9F;
+  grid-area: image;
+}
+
+
+.personDetails{
+  margin-top: 20%; 
+  grid-area: text;
+}
+
+.nameOfPerson{
+  color:#F4B72F;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+
+
+.designationOfPerson{
+  color:#A9A3B5;
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+
+.socialMediaImageGroup{
+  margin-top:5%;
+}
+
+
+.aboutPerson{
+  color:#A9A3B5;
+  margin-top: 15%;
+  width:70%;
+}
+
+
+@media screen and (max-width: 880px) {
+  .personImage{
+    width:40vw;
+  }
+  .peopleWholeContainer{
+    margin-left: 6vw;
+  }
+  .peopleTitleGrid{
+    margin-left: 6vw;
+  }
+  .peopleTitle{
+    font-size: 3.6rem;
+  }
+  .nameOfPerson{
+    font-size: 2rem;
+  }
+  .personDetails{
+    width: 38vw;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+	.aboutPerson {
+    margin-top:2vw;
+  }
+	.socialMediaImageGroup {
+    margin-top:0.5rem;
+  }
+  .socialMediaImageGroup img {
+    height:1.5rem;
+  }
+
+	.designationOfPerson {
+    font-size: 0.8rem;
+    margin-top:0
+  }
+
+	.nameOfPerson {
+    font-size: 1.88rem;
+  }
+
+	.personDetails {
+    margin-top: 2vh;
+    width: 90vw;
+  }
+
+	.personImage{
+    width:70vw;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #806F9F;
+  }
+
+	.individualPerson {
+    display: block;
+    margin-bottom: 5vh;
+	}
+
+	.peopleWholeContainer {
+    margin-top:2vw;
+    margin-left:10vw;
+    width:78vw;
+	}
+
+	.horizontalLine {
+    border-left: #C9BEDF 0.5rem solid;
+  }
+	.peopleTitleGrid {
+    margin-top: 5vh;
+    margin-left:10vw;
+    width:78vw;
+	}
+
+	.peopleTitle {
+		font-size: 3rem;
+	}
+}
+
+
+

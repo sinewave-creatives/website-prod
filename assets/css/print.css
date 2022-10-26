@@ -1,0 +1,149 @@
+.printImageDiv {
+  height: 80vh;
+  position: sticky;
+  top: 0;
+  padding-top: 20vh;
+  padding-left: 3vw;
+  display: flex;
+  padding-bottom: 2vw;
+  gap: 2rem;
+}
+
+.wholeDivBG:nth-of-type(2n + 1) {
+  background-color: #4d337f;
+}
+
+.wholeDivBG:nth-of-type(2n) {
+  background-color: #f4b724;
+}
+
+.wholeDivBG:nth-of-type(2n) .printTitle {
+  color: #4d337f;
+}
+
+.wholeDivBG:nth-of-type(2n + 1) .printTitle {
+  color: #f4b724;
+}
+
+.printImageDiv img {
+  border-radius: 5vh;
+  height: 60vh;
+  max-width: 50vw;
+  object-fit: cover;
+  box-shadow: 2px 9px 20px rgba(0, 0, 0, 0.8);
+}
+
+.printImageDiv:nth-of-type(3n + 2) img {
+  transform: rotate(-5deg);
+}
+
+.printImageDiv:nth-of-type(3n) img {
+  transform: rotate(5deg);
+}
+
+.printImageDiv:nth-of-type(3n + 1) img {
+  transform: rotate(-1deg);
+}
+
+.printContent {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 5rem;
+}
+
+.printTitle {
+  color: #f4b724;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.mobileFix {
+  display: none;
+}
+.printText {
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  color: white;
+}
+
+.printImageDiv img {
+  background: transparent;
+}
+@media screen and (max-width: 1024px) {
+  .printContent {
+    position: relative;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    z-index: 2;
+  }
+
+  .printImageDiv {
+    height: 82vh;
+    padding-top: 7vh;
+    margin-left: 0vw;
+    display: flex;
+    padding-bottom: 8vw;
+  }
+
+  .printText {
+    font-size: 1.5rem;
+    margin-left: 0rem;
+  }
+  .mobileFix {
+    display: unset;
+  }
+  .printImageDiv {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .printImageDiv img {
+    position: relative;
+    height: 43vh;
+    z-index: 4;
+    max-width: 90vw;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .printTitle {
+    font-size: 1.5rem;
+  }
+  .printImageDiv {
+    display: block;
+    padding-top: 10vh;
+    padding-bottom: 2 5vh;
+  }
+  .printImageDiv img {
+    margin-left: auto;
+    margin-right: auto;
+    height: 30vh;
+    box-shadow: 2px 9px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .printImageDiv {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .printContent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    z-index: 2;
+  }
+  .printText {
+    font-size: 1rem;
+    margin-left: 0rem;
+    text-align: center;
+    text-justify: center;
+  }
+  .mobileFix {
+    display: unset;
+  }
+}

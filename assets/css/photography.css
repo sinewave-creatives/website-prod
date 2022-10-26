@@ -1,0 +1,129 @@
+/* Roller Images */
+.rollerPhotographyImages {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.rollerPhotographyImages:nth-of-type(3n + 2) {
+  background-color: white;
+  color: #4d337f;
+}
+
+.rollerPhotographyImages:nth-of-type(3n) {
+  background-color: #4d337f;
+  color: white;
+}
+
+.rollerPhotographyImages:nth-of-type(3n + 1) {
+  background-color: #f4b724;
+  color: #4d337f;
+}
+
+.photoTitle {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gridPhotoContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  margin-bottom: 1rem;
+}
+
+.gridPhotoContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.firstSetOfPhotos {
+  display: flex;
+  /* -webkit-animation: slide 35s linear infinite;
+	-moz-animation: slide 35s linear infinite;
+	-o-animation: slide 35s linear infinite;
+	animation: slide 35s linear infinite; */
+}
+
+/* @keyframes slide {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(-50%, 0, 0);
+		-moz-transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-50%, 0, 0);
+	}
+} */
+.photoDesc {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  margin-left: 40px;
+  padding: 7px 15px;
+  background-color: rgb(81, 82, 167);
+  border-radius: 2rem;
+}
+
+.photoDesc a {
+  color: white;
+}
+
+.gridPhotoContainer .photographyContainer img {
+  position: relative;
+  z-index: 3;
+  height: 50vh;
+  width: auto;
+  border-radius: 5%;
+  margin: 10px;
+}
+
+.firstPhoto {
+  margin-left: 30px;
+}
+
+.lastPhoto {
+  padding-right: 30px;
+}
+@media screen and (max-width: 480px) {
+  .gridPhotoContainer .photographyContainer img {
+    object-fit: cover;
+    height: 80vw;
+    width: 80vw;
+  }
+  .firstSetOfPhotos {
+    display: flex;
+    /* -webkit-animation: slide 5s linear infinite;
+        -moz-animation: slide 5s linear infinite;
+        -o-animation: slide 5s linear infinite;
+        animation: slide 5s linear infinite; */
+  }
+
+  .rollerPhotographyImages {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .photoTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .photoDesc {
+    text-align: center;
+    padding: 7px 15px;
+    width: 50vw;
+    margin: 25vw 30vw;
+    background-color: rgb(81, 82, 167);
+    border-radius: 2rem;
+    font-size: 0.7rem;
+  }
+}

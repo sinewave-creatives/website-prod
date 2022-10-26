@@ -1,0 +1,887 @@
+@font-face {
+  font-family: "Futura LT W01 Medium";
+  src: url("77d394fa0c1103c648f880b77cb4a32f.eot");
+  /* IE9*/
+  src: url("77d394fa0c1103c648f880b77cb4a32f.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("77d394fa0c1103c648f880b77cb4a32f.woff2") format("woff2"),
+    /* chrome、firefox */ url("77d394fa0c1103c648f880b77cb4a32f.woff")
+      format("woff"),
+    /* chrome、firefox */ url("77d394fa0c1103c648f880b77cb4a32f.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("77d394fa0c1103c648f880b77cb4a32f.svg#Futura LT W01 Medium")
+      format("svg");
+  /* iOS 4.1- */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("0462590be6674a5827956be5045c54de.eot");
+  /* IE9*/
+  src: url("0462590be6674a5827956be5045c54de.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("0462590be6674a5827956be5045c54de.woff2") format("woff2"),
+    /* chrome、firefox */ url("0462590be6674a5827956be5045c54de.woff")
+      format("woff"),
+    /* chrome、firefox */ url("0462590be6674a5827956be5045c54de.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("0462590be6674a5827956be5045c54de.svg#Montserrat Regular")
+      format("svg");
+  /* iOS 4.1- */
+  font-display: swap;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html,
+body {
+  font-family: "Futura LT W01 Medium", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bannerVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+  -webkit-animation: fadein 0.5s ease 1 normal forwards;
+}
+
+.topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.3rem 10%;
+  background-color: #201b4059;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  height: 6.25rem;
+  z-index: 15;
+  opacity: 1;
+  animation: showTopBarAnimation 0.3s linear;
+  -webkit-animation: fadein 0.5s ease 1 normal forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hideTopBarAnimation {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.5625rem;
+  }
+  50% {
+    top: -3.125rem;
+  }
+  75% {
+    top: -4.6875rem;
+  }
+  100% {
+    top: -7.25rem;
+  }
+}
+
+@keyframes showTopBarAnimation {
+  0% {
+    top: -7.25rem;
+  }
+  25% {
+    top: -4.6875rem;
+  }
+  50% {
+    top: -3.125rem;
+  }
+  75% {
+    top: -1.5625rem;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.hideTopBar {
+  top: -7.25rem;
+  animation: hideTopBarAnimation 0.3s linear;
+}
+
+.navButtonsContainer {
+  position: relative;
+}
+
+.navButtonsContainer button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.menuBar {
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 1px solid #232425;
+  background-color: #232425;
+  font-size: 1.6rem;
+  display: flex;
+  width: 370px;
+  overflow: hidden;
+  display: none;
+  z-index: 16;
+  padding: 1rem;
+  height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .menuBar {
+    padding: 1vw;
+    width: 98vw;
+  }
+}
+
+/* .secondMenu {
+	padding-left: 1em;
+}
+
+@media screen and (max-width: 480px) {
+	.secondMenu {
+		padding-left: 2em;
+	}
+} */
+
+.menuItem {
+  min-width: 355px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.menuItem:hover {
+  background-color: #3a3b3c;
+}
+
+@media screen and (max-width: 480px) {
+  .menuItem {
+    width: 96vw;
+  }
+
+  .secondMenu .menuItem {
+    width: 92vw;
+  }
+}
+
+.secondMenu .menuItem:first-child {
+  justify-content: flex-start;
+}
+
+.menuItem button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* .menuItem button img:hover {
+	border-radius: 50%;
+	background-color: #00000052;
+} */
+
+.itemNameAndIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 200px;
+}
+
+.menuItem .itemNameAndIcon img {
+  margin-right: 0.8rem;
+  cursor: pointer;
+  background-color: #f4b724;
+  padding: 0.3em;
+  border-radius: 50%;
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* .menuImage{
+	filter:invert(88%) sepia(21%) saturate(935%) hue-rotate(42deg) brightness(85%) contrast(97%);
+} */
+
+.firstSlide {
+  padding-top: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .firstSlide {
+    padding-top: 35vh;
+    min-height: 60vh;
+  }
+}
+
+.boldText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-left: 11vw;
+  font-family: "Futura LT W01 Medium", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.boldText span {
+  font-size: 6.25rem;
+  letter-spacing: 0.13ch;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  .boldText span {
+    font-size: 2.25rem;
+  }
+}
+
+.firstBold {
+  color: white;
+  line-height: 5.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .firstBold {
+    line-height: 2.5rem;
+  }
+}
+
+.secondBold {
+  color: rgb(244, 183, 36);
+}
+
+/* About Section */
+.about {
+  background-color: transparent;
+  color: white;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.aboutHeading {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 2.5rem;
+  margin: 39px auto 20px auto;
+}
+
+.aboutDescription {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1.063rem;
+  text-align: center;
+}
+
+.readMoreLink {
+  margin: 0 auto 1.75rem auto;
+  text-decoration: underline;
+  color: white;
+}
+
+.services {
+  margin: 1rem 0 0;
+}
+
+.servicesHeading {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: white;
+}
+
+.servicesGrid {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.serviceContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 3px solid #f4b72f;
+  text-align: center;
+}
+
+/* .serviceType {
+	position: absolute;
+	top: 40%;
+	font-size: 1.2rem;
+	padding: 0 3%;
+	 color: white; 
+	 width: 94%; 
+} */
+
+.serviceContainer a {
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  width: 100%;
+}
+
+.serviceContainer .viewMoreButton {
+  background-color: rgba(80, 30, 80, 0.619);
+  color: #f4b72f;
+  border: 1px solid #f4b72f;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.7em 2em;
+  z-index: 3;
+  cursor: pointer;
+  max-width: 90%;
+}
+
+.serviceContainer .viewMoreButton:hover {
+  transform: scale(1.05);
+  translate: all 0.4s linear;
+}
+
+.servicesGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.servicesGrid img:hover,
+.servicesGrid img:focus,
+.servicesGrid img:active {
+  filter: blur(4px);
+}
+
+@media (min-width: 300px) {
+  .servicesGrid {
+    overflow-x: hidden;
+  }
+  .serviceContainer {
+    height: 200px;
+  }
+  .serviceType {
+    top: 20%;
+  }
+  .serviceContainer .viewMoreButton {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .serviceContainer .viewMoreButton {
+    font-size: 1.2rem;
+  }
+  .serviceContainer {
+    height: 260px;
+  }
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+}
+
+@media (min-width: 780px) {
+  .serviceContainer .viewMoreButton {
+    font-size: 1.2rem;
+  }
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+}
+
+@media (min-width: 1100px) {
+  .serviceContainer .viewMoreButton {
+    font-size: 1.2rem;
+  }
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+  }
+}
+
+/* .logoContainer img{
+	height:68px;
+}
+
+@media screen and (max-width: 480px) {
+	.logoContainer img{
+		height:45px;
+	}
+} */
+
+/* Roller Images */
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.gridContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.firstSetOfStuffDone,
+.secondSetOfStuffDone {
+  display: flex;
+  -webkit-animation: slide 35s linear infinite;
+  -moz-animation: slide 35s linear infinite;
+  -o-animation: slide 35s linear infinite;
+  animation: slide 35s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    -moz-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.secondSetOfStuffDone {
+  margin-top: -5px;
+}
+
+/* prettier-ignore */
+.gridContainer .imageContainer:hover {
+    display:inline-block;
+    background: -moz-linear-gradient(top, rgba(77,51,127,0.01) 0%, rgba(244,183,47,0.6) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,183,47,0.6)), color-stop(100%,rgba(77,51,127,0.01))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(77,51,127,0.01) 0%,rgba(244,183,47,0.6) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(77,51,127,0.01) 0%,rgba(244,183,47,0.6) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(77,51,127,0.01) 0%,rgba(244,183,47,0.6) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(77,51,127,0.01) 0%,rgba(244,183,47,0.6) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.gridContainer .imageContainer img {
+  position: relative;
+  z-index: -1;
+}
+
+@media screen and (max-width: 480px) {
+  .gridContainer .imageContainer img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* Clients */
+
+.clients {
+  background-color: #4d337f;
+  display: flex;
+  flex-direction: column;
+}
+
+.clientsGridContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  margin: 5rem auto 2rem;
+}
+
+.clientsImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientsGridContainer img.landscape {
+  height: auto;
+  width: 150px;
+}
+
+.clientsGridContainer img.portrait {
+  height: auto;
+  width: 90px;
+}
+
+.clientsGridContainer img.square {
+  height: auto;
+  width: 80px;
+}
+.firstClientRow,
+.secondClientRow,
+.thirdClientRow,
+.fourthClientRow,
+.fifthClientRow,
+.sixthClientRow,
+.seventhClientRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fourthClientRow,
+.fifthClientRow,
+.sixthClientRow {
+  margin-top: 2rem;
+}
+
+.lastClientRow {
+  margin-top: 0;
+}
+
+@supports (gap: 5px) {
+  .firstClientRow div:not(:last-child),
+  .secondClientRow div:not(:last-child),
+  .thirdClientRow div:not(:last-child),
+  .fourthClientRow div:not(:last-child),
+  .fifthClientRow div:not(:last-child),
+  .sixthClientRow div:not(:last-child) {
+    padding-right: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .clientsGridContainer img.landscape {
+    height: auto;
+    width: 150px;
+  }
+
+  .clientsGridContainer img.portrait {
+    height: auto;
+    width: 90px;
+  }
+
+  .clientsGridContainer img.square {
+    height: auto;
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .clientsGridContainer img.landscape {
+    height: auto;
+    width: 160px !important;
+  }
+  .clientsGridContainer img.square {
+    height: auto;
+    width: 90px !important;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  @supports (gap: 5px) {
+    .firstClientRow div:not(:last-child),
+    .secondClientRow div:not(:last-child),
+    .thirdClientRow div:not(:last-child),
+    .fourthClientRow div:not(:last-child),
+    .fifthClientRow div:not(:last-child),
+    .sixthClientRow div:not(:last-child) {
+      padding-right: 0.5rem;
+    }
+  }
+  .clientsGridContainer img.landscape {
+    height: auto;
+    width: 112px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  @supports (gap: 5px) {
+    .firstClientRow div:not(:last-child),
+    .secondClientRow div:not(:last-child),
+    .thirdClientRow div:not(:last-child),
+    .fourthClientRow div:not(:last-child),
+    .fifthClientRow div:not(:last-child),
+    .sixthClientRow div:not(:last-child) {
+      padding-right: 0.5rem;
+    }
+  }
+  .clientsGridContainer img.landscape {
+    height: auto;
+    width: 95px;
+  }
+  .clientsGridContainer img.square {
+    height: auto;
+    width: 50px;
+  }
+  .clientsGridContainer img.portrait {
+    height: 90px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .firstClientRow,
+  .secondClientRow,
+  .thirdClientRow,
+  .fourthClientRow,
+  .fifthClientRow,
+  .sixthClientRow {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    justify-content: space-between;
+  }
+
+  .fourthClientRow,
+  .fifthClientRow,
+  .sixthClientRow {
+    margin-top: 0.7rem;
+  }
+
+  .lastClientRow {
+    margin-top: 0;
+  }
+
+  @supports (gap: 5px) {
+    .firstClientRow div:not(:last-child),
+    .secondClientRow div:not(:last-child),
+    .thirdClientRow div:not(:last-child),
+    .fourthClientRow div:not(:last-child),
+    .fifthClientRow div:not(:last-child),
+    .sixthClientRow div:not(:last-child) {
+      padding-right: 0.1rem;
+    }
+  }
+  .clientsGridContainer img.landscape {
+    height: auto;
+    width: 76px;
+  }
+  .clientsGridContainer img.square {
+    height: auto;
+    width: 50px;
+  }
+  .clientsGridContainer img.portrait {
+    height: 60px;
+    width: auto;
+  }
+}
+
+/* Testimonies */
+
+.testimoniesContainer {
+  display: grid;
+  grid-template-columns: 40fr 1fr 40fr 1fr 40fr;
+}
+
+.testimonyCard {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonyPersonImage {
+  margin-top: 5rem;
+  filter: grayscale(90%);
+  margin-bottom: 3rem;
+  height: 30px;
+  width: auto;
+}
+
+.onlyMobile {
+  display: none;
+}
+.notMobile {
+  display: block;
+}
+
+.testimonyNameOfPerson {
+  font-family: "Futura LT W01 Medium", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.625rem;
+  color: #f4b72f;
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+
+.testimonyCompanyOfPerson {
+  font-family: "Futura LT W01 Medium", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.225rem;
+  color: #f4b72f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.actualTestimony {
+  font-family: "Futura LT W01 Medium", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.938rem;
+  color: #a699bf;
+  font-weight: 400;
+  text-align: center;
+  max-width: 280px;
+  margin-bottom: 4rem;
+}
+
+.quoteImage {
+  transform: rotate(180deg);
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .testimoniesContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .quoteImage {
+    display: none;
+  }
+  .testimonyCard:nth-child(1) {
+    border-bottom: 5px solid white;
+  }
+  .testimonyCard:last-child {
+    border-top: 5px solid white;
+  }
+  .testimonyPersonImage {
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    height: 32px;
+    width: auto;
+  }
+
+  .testimonyNameOfPerson {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .testimonyNameOfPerson {
+    font-size: 1.225rem;
+  }
+
+  .testimonyCompanyOfPerson {
+    font-size: 0.825rem;
+  }
+
+  .actualTestimony,
+  .testimonyCompanyOfPerson {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .onlyMobile {
+    display: block;
+  }
+
+  .notMobile {
+    display: none;
+  }
+}
+
+.responsiveLogo {
+  height: 60px;
+}
+
+.contactGrid {
+  margin-top: 25px;
+  display: flex;
+}
+.contactChild {
+  background-color: #f4b724;
+  height: 55px;
+  width: 55px;
+  border-radius: 20%;
+  margin-left: 20px;
+}
+
+.contactImage {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (max-width: 480px) {
+  .responsiveLogo {
+    height: 45px;
+    margin-left: -15px;
+  }
+  .topBar {
+    height: 4rem;
+  }
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}

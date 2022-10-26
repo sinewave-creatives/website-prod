@@ -1,0 +1,396 @@
+:root {
+  --borderRadiusOfImage: 25px;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.topBar {
+  background-color: #4d337f;
+}
+
+.responsiveLogo {
+  height: 60px;
+}
+
+.container:nth-of-type(3n) {
+  background-color: #4d337f;
+  color: white;
+}
+
+.container:nth-of-type(3n + 1) {
+  background-color: #f4b724;
+  color: white;
+}
+
+.container:nth-of-type(3n + 2) {
+  background-color: white;
+  color: #4d337f;
+}
+
+.container:nth-of-type(3n) .brandName {
+  color: #f4b724;
+}
+
+.container:nth-of-type(3n + 1) .brandName {
+  color: #4d337f;
+}
+
+.container:nth-of-type(3n + 2) .brandName {
+  color: #f4b724;
+}
+
+.container:nth-of-type(3n) .imagesGrid,
+.container:nth-of-type(3n) .onlyOne {
+  box-shadow: 2px 9px 30px #f3c24e;
+  box-shadow: -2px -9px 30px #f3c24e;
+}
+
+.container:nth-of-type(3n + 1) .imagesGrid,
+.container:nth-of-type(3n + 1) .onlyOne {
+  box-shadow: 2px 9px 30px white;
+  box-shadow: -2px -9px 30px white;
+}
+
+.container:nth-of-type(3n + 2) .imagesGrid,
+.container:nth-of-type(3n + 2) .onlyOne {
+  box-shadow: 2px 9px 30px #714cb6;
+  box-shadow: -2px -9px 30px #714cb6;
+}
+
+.wrapperController {
+  background-color: #f4b724;
+  padding-top: 150px;
+  opacity: 0.7;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.heading span {
+  padding-bottom: 3rem;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #4d337f;
+  /* opacity: 1; */
+}
+
+.tagLine {
+  font-size: 1.8rem;
+  /* opacity: 1; */
+}
+
+.section {
+  margin-top: 3rem;
+  min-height: 100px;
+  width: 100%;
+}
+
+.containerContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.container:nth-of-type(2n + 1) .containerContent {
+  flex-direction: row;
+}
+
+.container:nth-of-type(2n) .containerContent {
+  flex-direction: row-reverse;
+}
+
+.container:nth-of-type(2n) .containerContent .leftContent {
+  padding-left: 2rem;
+}
+
+.imagesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: var(--borderRadiusOfImage);
+}
+
+.onlyOne {
+  border-radius: var(--borderRadiusOfImage);
+}
+
+.imagesGrid img:nth-child(1) {
+  border-top-left-radius: var(--borderRadiusOfImage);
+}
+
+.imagesGrid img:nth-child(2) {
+  border-top-right-radius: var(--borderRadiusOfImage);
+}
+
+.imagesGrid img:nth-child(3) {
+  border-bottom-left-radius: var(--borderRadiusOfImage);
+}
+
+.imagesGrid img:nth-child(4) {
+  border-bottom-right-radius: var(--borderRadiusOfImage);
+}
+
+.onlyOne {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.leftRad {
+  border-top-left-radius: var(--borderRadiusOfImage);
+  border-bottom-left-radius: var(--borderRadiusOfImage);
+}
+
+.rightRad {
+  border-top-right-radius: var(--borderRadiusOfImage);
+  border-bottom-right-radius: var(--borderRadiusOfImage);
+}
+
+.leftContent {
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  vertical-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.brandName {
+  font-weight: 600;
+  font-size: 2.875rem;
+}
+
+.smBrandName {
+  font-weight: 600;
+  font-size: 3.25rem;
+}
+
+.detailedDesc {
+  font-size: 1.7rem;
+}
+
+.productTagLine {
+  font-size: 1.5rem;
+}
+.mobileDesc {
+  display: none;
+  /* color:black */
+}
+
+.smJustify {
+  text-align: left;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 880px) {
+  .imagesGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .brandName,
+  .smBrandName {
+    font-size: 1.9rem;
+  }
+
+  .heading .pageTitle {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2.275rem;
+  }
+
+  .tagLine {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .detailedDesc {
+    font-size: 1rem;
+  }
+  .content {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .wrapperController {
+    padding-top: 100px;
+  }
+
+  .responsiveLogo {
+    height: 45px;
+    margin-left: -15px;
+  }
+  .topBar {
+    height: 4rem;
+  }
+}
+.detailedDesc a,
+.mobileDesc a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  padding: 7px 15px;
+  background-color: rgb(81, 82, 167);
+  border-radius: 2rem;
+}
+@media screen and (min-width: 480px) {
+  .container:nth-of-type(2n) .containerContent .leftContent {
+    padding-left: 6rem;
+  }
+  .container:nth-of-type(2n + 1) .containerContent .leftContent {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .containerContent {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    justify-content: flex-end;
+    max-width: unset;
+  }
+  .leftContent {
+    margin-right: 3rem;
+    width: 100%;
+  }
+  .leftContent .content {
+    margin-top: 3rem;
+    text-align: justify;
+  }
+
+  .imagesGrid {
+    width: 40vw;
+  }
+
+  .onlyOne img {
+    width: 40vw;
+    height: 40vw;
+    object-fit: cover;
+  }
+
+  .imagesGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 20vw;
+    max-width: 20vw;
+  }
+
+  .container:nth-of-type(2n) .containerContent .imagesGrid img:nth-child(1) {
+    border-top-left-radius: unset;
+  }
+
+  .container:nth-of-type(2n + 1)
+    .containerContent
+    .imagesGrid
+    img:nth-child(2) {
+    border-top-right-radius: unset;
+  }
+
+  .container:nth-of-type(2n) .containerContent .imagesGrid img:nth-child(3) {
+    border-bottom-left-radius: unset;
+  }
+
+  .container:nth-of-type(2n + 1)
+    .containerContent
+    .imagesGrid
+    img:nth-child(4) {
+    border-bottom-right-radius: unset;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .brandName,
+  .smBrandName {
+    padding-bottom: 0rem;
+    font-size: 1.9rem;
+  }
+
+  .smJustify {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .mobileDesc {
+    margin-top: 2rem;
+    text-align: center;
+    text-justify: center;
+    display: block;
+  }
+  .productTagLine {
+    font-size: 1rem;
+  }
+
+  .container:nth-of-type(2n) .containerContent .leftContent {
+    padding-left: unset;
+  }
+  .containerContent {
+    display: block;
+  }
+  .content {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  /* .imagesGrid {
+    } */
+  .imagesGrid img {
+    height: 40vw;
+
+    object-fit: cover;
+  }
+  .onlyOne img {
+    width: 80vw;
+    height: 80vw;
+    object-fit: cover;
+
+    border-radius: var(--borderRadiusOfImage);
+  }
+  .leftContent {
+    padding-left: unset;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .onlyOne {
+    border-bottom-left-radius: var(--borderRadiusOfImage);
+    /* height: 200px; */
+    width: 96%;
+  }
+  .imagesGrid,
+  .onlyOne {
+    border-radius: var(--borderRadiusOfImage);
+  }
+
+  .detailedDesc {
+    display: none;
+  }
+  .responsiveLogo {
+    height: 45px;
+    margin-left: -15px;
+  }
+  .topBar {
+    height: 4rem;
+  }
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
