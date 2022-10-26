@@ -30,7 +30,7 @@ exports.handler = async (event, context, callback) => {
     secure: true,
     auth: {
       user: 'sinewaveenquiries',
-      pass: 'rdpyieztrnenboex'
+      pass: 'ztvznglpqqfqimqg'
     },
     logger: true,
     tls: {
@@ -81,7 +81,6 @@ exports.handler = async (event, context, callback) => {
   
   const mailOptions = {
     from: 'sinewaveenquiries@gmail.com',
-    // to: 'vinokrish001@gmail.com',
     to: 'sindhu@sinewave.design,sud@sinewave.design',
     subject: 'Sinewave Enquiry from '+data.name+' ( '+data.type+' ) + Website Testing',
     attachments: [{
