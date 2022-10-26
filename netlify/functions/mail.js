@@ -78,7 +78,7 @@ exports.handler = async (event, context, callback) => {
       </div>
     </div>
   `
-  
+   
   const mailOptions = {
     from: 'sinewaveenquiries@gmail.com',
     to: 'sindhu@sinewave.design,sud@sinewave.design',
