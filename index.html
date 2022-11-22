@@ -20,19 +20,10 @@
 <body>
     
 
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-        console.log("Init FB SDK v1")
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "100997791715004");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Load Facebook SDK for JavaScript -->
+   <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
+    console.log("v2 init")
 window.fbAsyncInit = function() {
   FB.init({
     xfbml            : true,
@@ -54,7 +45,6 @@ window.fbAsyncInit = function() {
   attribution_version="biz_inbox"
   page_id="100997791715004">
 </div>
-
 
 
 
