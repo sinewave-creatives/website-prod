@@ -12,7 +12,7 @@ function qs(element, parent = document) {
   return parent.querySelector(element);
 }
 
-function redirectTo(path) {
+function redirectToURL(path) {
   var base_url = window.location.origin;
   window.location.href = base_url + path;
 }
