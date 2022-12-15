@@ -18,6 +18,8 @@
     <script>
         function redirectToURL(path) {
         // console.log("Here : ", path);
+        path=path.split("/")
+        path="/"+path[path.length-1]
         var base_url = window.location.origin;
         console.log("Here : ", base_url +path);
           window.location.href = base_url + path;
